@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- <bean id="user" class="cqut.yook.model.User" scope="prototype"> <constructor-arg 
+		index="0" value="yook" /> </bean> <bean id="user1" class="cqut.yook.model.User" 
+		scope="prototype"> <constructor-arg name="name" value="yook" /> </bean> <bean 
+		id="user2" class="cqut.yook.model.User" scope="prototype"> <constructor-arg 
+		type="java.lang.String" value="yook" /> </bean> <bean id="user4" class="cqut.yook.factory.UserFactory" 
+		factory-method="newInstance"> <constructor-arg index="0" value="yook" /> 
+		</bean> <bean id="userDynamicFactory" class="cqut.yook.factory.UserDynamicFactory" 
+		/> <bean id="user5" class="cqut.yook.factory.UserFactory" factory-bean="userDynamicFactory" 
+		factory-method="newInstance"> <constructor-arg index="0" value="yook" /> 
+		</bean> -->
+	<!-- id是bean的标识符,要唯一,如果没有配置id,则name为默认标识符 如果配置了id,又配置了name,那么id为默认标识符,name为别名 
+		name属性可以设置多个别名,分隔符可以是空格、逗号、分号 class是bean的全限定名:包名+类名 在配置文件中如果某个bean配置了唯一了class,则不配置id和name,也可以根据applicationContext.getBean(Class)获取对象 -->
+	<bean id="myUser" name="yook" class="cqut.yook.model.User">
+		<property name="name" value="yook" />
+	</bean>
+
+	<!-- <import resource="beans/beans.xml" /> -->
+</beans>
